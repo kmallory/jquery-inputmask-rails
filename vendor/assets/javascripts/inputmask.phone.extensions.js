@@ -10,7 +10,7 @@
 }(function($) {
     return Inputmask.extendAliases({
         phone: {
-            url: "phone-codes/phone-codes.js",
+            url: "extra/phone-codes/phone-codes.js",
             countrycode: "",
             mask: function(opts) {
                 opts.definitions["#"] = opts.definitions[9];
@@ -34,13 +34,13 @@
             nojumpsThreshold: 1,
             onBeforeMask: function(value, opts) {
                 var processedValue = value.replace(/^0/g, "");
-                return (processedValue.indexOf(opts.countrycode) > 1 || -1 === processedValue.indexOf(opts.countrycode)) && (processedValue = "+" + opts.countrycode + processedValue), 
+                return (processedValue.indexOf(opts.countrycode) > 1 || -1 === processedValue.indexOf(opts.countrycode)) && (processedValue = "+" + opts.countrycode + processedValue),
                 processedValue;
             }
         },
         phonebe: {
             alias: "phone",
-            url: "phone-codes/phone-be.js",
+            url: "extra/phone-codes/phone-be.js",
             countrycode: "32",
             nojumpsThreshold: 4
         }
