@@ -10,7 +10,7 @@
 }(function($) {
     return Inputmask.extendAliases({
         phone: {
-            url: "extra/phone-codes/phone-codes.js",
+            url: "phone-codes.js",
             countrycode: "",
             mask: function(opts) {
                 opts.definitions["#"] = opts.definitions[9];
@@ -40,7 +40,7 @@
         },
         phonebe: {
             alias: "phone",
-            url: "extra/phone-codes/phone-be.js",
+            url: "phone-be.js",
             countrycode: "32",
             nojumpsThreshold: 4
         }
